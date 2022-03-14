@@ -1,0 +1,8 @@
+- name: Check if we need to install onecontext
+  include_role:
+    name: install-onecontext
+  when: onecontext == "true"
+- name: Set onecontext tag for image file name
+  set_fact:
+    ci_tag: "-one"
+  when: onecontext == "true"

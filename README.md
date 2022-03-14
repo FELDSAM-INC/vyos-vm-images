@@ -32,6 +32,13 @@ You need to copy the ISO image with VyOS to /tmp/vyos.iso before running ansible
     ansible-playbook qemu.yml
     ```
 
+- QEMU (OpenNebula)
+
+    ```
+    ansible-playbook qemu.yml -e disk_size=2 -e onecontext=true -e guest_agent=qemu
+    ```
+
+
 - VMware Cloud-init
 
     ```

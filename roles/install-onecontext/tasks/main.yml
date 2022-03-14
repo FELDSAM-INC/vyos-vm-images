@@ -1,0 +1,13 @@
+- name: copy poststartup script
+  become: true
+  copy:
+    src: vyos-postconfig-bootup.script
+    dest: "{{ vyos_install_root }}/opt/vyatta/etc/config/scripts/vyos-postconfig-bootup.script"
+    mode: 0755
+
+- name: copy vmcontext script
+  become: true
+  copy:
+    src: vyatta-vmcontext.sh
+    dest: "{{ vyos_install_root }}/opt/vyatta/sbin/vyatta-vmcontext.sh"
+    mode: 0755

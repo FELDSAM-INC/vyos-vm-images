@@ -10,6 +10,7 @@
     cloud_init: "false"
     cloud_init_ds_string: "{{ cloud_init_ds | default('NoCloud,ConfigDrive,None') }}"
     cloud_init_ds_list: "{{ cloud_init_ds_string.split(',') }}"
+    onecontext: "false"
   tasks:
     - block:
         - include_role:
